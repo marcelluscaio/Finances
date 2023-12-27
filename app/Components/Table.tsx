@@ -5,17 +5,17 @@ export default function TableFunction() {
 		<Table.Root>
 			<Table.Header>
 				<Table.Row>
-					<Table.ColumnHeaderCell>Full name</Table.ColumnHeaderCell>
-					<Table.ColumnHeaderCell>Email</Table.ColumnHeaderCell>
-					<Table.ColumnHeaderCell>Group</Table.ColumnHeaderCell>
+					<Table.ColumnHeaderCell>Evento</Table.ColumnHeaderCell>
+					<Table.ColumnHeaderCell>Valor</Table.ColumnHeaderCell>
+					<Table.ColumnHeaderCell>Origem</Table.ColumnHeaderCell>
 				</Table.Row>
 			</Table.Header>
 
 			<Table.Body>
 				<Table.Row>
-					<Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
-					<Table.Cell>danilo@example.com</Table.Cell>
-					<Table.Cell>Developer</Table.Cell>
+					<Table.RowHeaderCell>Conta Luz</Table.RowHeaderCell>
+					<Table.Cell>R$36,60</Table.Cell>
+					<Table.Cell>Conta Caio</Table.Cell>
 				</Table.Row>
 
 				<Table.Row>
