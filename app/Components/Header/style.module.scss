@@ -1,0 +1,16 @@
+@use "../../styles/colors" as color;
+
+.header {
+	background-color: color.$green-300;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.title {
+		padding-block: 1em;
+		color: color.$white;
+	}
+}
