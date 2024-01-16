@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Biryani } from "next/font/google";
 import "./styles/index.scss";
 
-const biryani = Biryani({ subsets: ["latin"], weight: ["400", "700"] });
+const biryani = Biryani({
+	subsets: ["latin"],
+	weight: ["400", "700"],
+	variable: "--font-primary",
+	display: "swap",
+});
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -11,7 +16,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
+		<html
+			className={biryani.variable}
+			lang="en"
+		>
 			<body>{children}</body>
 		</html>
 	);
