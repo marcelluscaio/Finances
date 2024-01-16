@@ -1,5 +1,4 @@
 {
-	"plugins": ["prettier-plugin-astro"],
 	"trailingComma": "all",
 	"tabWidth": 2,
 	"useTabs": true,
