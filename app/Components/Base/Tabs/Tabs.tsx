@@ -3,16 +3,22 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Buttons";
+import Title from "../Title/Title";
+import style from "./style.module.scss";
 
 export default function TabsComponent() {
 	const triggers = ["Entries", "Accounts", "Labels", "Budget"];
 
 	return (
 		<Tabs.Root
+			className={style.tab}
 			defaultValue="tab1"
 			orientation="horizontal"
 		>
-			<Tabs.List aria-label="tabs example">
+			<Tabs.List
+				className={style.list}
+				aria-label="tabs example"
+			>
 				{triggers.map((trigger, index) => (
 					<Tabs.Trigger
 						className="button"
@@ -22,20 +28,15 @@ export default function TabsComponent() {
 						{trigger}
 					</Tabs.Trigger>
 				))}
-				{/* <Tabs.Trigger
-					className="button"
-					value="tab1"
-				>
-					Entries
-				</Tabs.Trigger> */}
-				{/* 
-				<Tabs.Trigger value="tab2">Accounts</Tabs.Trigger>
-				<Tabs.Trigger value="tab3">Labels</Tabs.Trigger>
-				<Tabs.Trigger value="tab4">Budget</Tabs.Trigger> */}
 			</Tabs.List>
 			<Tabs.Content value="tab1">
 				<form>
-					<h2>Add Entry</h2>
+					<Title
+						size="small"
+						level="h2"
+					>
+						Add Entry
+					</Title>
 					<TextInput id="entry-description">Description</TextInput>
 					<TextInput id="entry-amount">Amount</TextInput>
 					<TextInput id="entry-label">Label</TextInput>
@@ -45,37 +46,42 @@ export default function TabsComponent() {
 				</form>
 			</Tabs.Content>
 			<Tabs.Content value="tab2">
+				<Title
+					size="small"
+					level="h2"
+				>
+					Add Account
+				</Title>
 				<form>
-					<div>
-						<label>Account</label>
-						<input />
-					</div>
-					<div>
-						<label>Total</label>
-						<input />
-					</div>
+					<TextInput id="account-account">Account</TextInput>
+					<TextInput id="account-total">Total</TextInput>
 					<Button>Create</Button>
 				</form>
 			</Tabs.Content>
 			<Tabs.Content value="tab3">
 				<form>
-					<h2>Add Label</h2>
-					<TextInput id="label">Label</TextInput>
+					<Title
+						size="small"
+						level="h2"
+					>
+						Add Label
+					</Title>
+					<TextInput id="label-label">Label</TextInput>
 					<Button>Create</Button>
 				</form>
 			</Tabs.Content>
 			<Tabs.Content value="tab4">
 				<form>
-					<h2>Register Budget</h2>
-					<div>
-						<label>Description</label>
-						<input />
-					</div>
-					<div>
-						<label>Amount</label>
-						<input />
-					</div>
-					<button>Add</button>
+					<Title
+						size="small"
+						level="h2"
+					>
+						Register Budget
+					</Title>
+
+					<TextInput id="budget-description">Description</TextInput>
+					<TextInput id="budget-amount">Amount</TextInput>
+					<Button>Add</Button>
 					<table>{/* add items here */}</table>
 					<Button>Create</Button>
 				</form>
