@@ -2,18 +2,36 @@
 
 import * as Tabs from "@radix-ui/react-tabs";
 import TextInput from "../TextInput/TextInput";
+import Button from "../Button/Buttons";
 
 export default function TabsComponent() {
+	const triggers = ["Entries", "Accounts", "Labels", "Budget"];
+
 	return (
 		<Tabs.Root
 			defaultValue="tab1"
 			orientation="horizontal"
 		>
 			<Tabs.List aria-label="tabs example">
-				<Tabs.Trigger value="tab1">Entries</Tabs.Trigger>
+				{triggers.map((trigger, index) => (
+					<Tabs.Trigger
+						className="button"
+						value={`tab${index + 1}`}
+						key={index}
+					>
+						{trigger}
+					</Tabs.Trigger>
+				))}
+				{/* <Tabs.Trigger
+					className="button"
+					value="tab1"
+				>
+					Entries
+				</Tabs.Trigger> */}
+				{/* 
 				<Tabs.Trigger value="tab2">Accounts</Tabs.Trigger>
 				<Tabs.Trigger value="tab3">Labels</Tabs.Trigger>
-				<Tabs.Trigger value="tab4">Budget</Tabs.Trigger>
+				<Tabs.Trigger value="tab4">Budget</Tabs.Trigger> */}
 			</Tabs.List>
 			<Tabs.Content value="tab1">
 				<form>
@@ -23,7 +41,7 @@ export default function TabsComponent() {
 					<TextInput id="entry-label">Label</TextInput>
 					<TextInput id="entry-account">Account</TextInput>
 					<TextInput id="entry-date">Date</TextInput>
-					<button>Create</button>
+					<Button>Create</Button>
 				</form>
 			</Tabs.Content>
 			<Tabs.Content value="tab2">
@@ -36,14 +54,14 @@ export default function TabsComponent() {
 						<label>Total</label>
 						<input />
 					</div>
-					<button>Create</button>
+					<Button>Create</Button>
 				</form>
 			</Tabs.Content>
 			<Tabs.Content value="tab3">
 				<form>
 					<h2>Add Label</h2>
 					<TextInput id="label">Label</TextInput>
-					<button>Create</button>
+					<Button>Create</Button>
 				</form>
 			</Tabs.Content>
 			<Tabs.Content value="tab4">
@@ -59,7 +77,7 @@ export default function TabsComponent() {
 					</div>
 					<button>Add</button>
 					<table>{/* add items here */}</table>
-					<button>Create</button>
+					<Button>Create</Button>
 				</form>
 			</Tabs.Content>
 		</Tabs.Root>

@@ -42,10 +42,12 @@ body {
 		@extend .text;
 		font-size: var(--fs-3);
 	}
+
 	&--medium {
 		@extend .text;
 		font-size: var(--fs-2);
 	}
+
 	&--small {
 		@extend .text;
 		font-size: var(--fs-1);

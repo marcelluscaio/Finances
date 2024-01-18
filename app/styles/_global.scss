@@ -1,0 +1,25 @@
+@use "./colors";
+@use "./typography";
+
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	min-height: 100vh;
+	min-height: 100svh;
+
+	background-color: colors.$white;
+
+	color: colors.$gray;
+}
+
+.button {
+	@extend .text--medium;
+
+	padding: 0.5em 1em 0.25em;
+	border-radius: 0.25em;
+
+	background-color: colors.$green-700;
+
+	color: colors.$white;
+}

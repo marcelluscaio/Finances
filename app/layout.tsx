@@ -4,7 +4,8 @@ import Header from "./Components/Sections/Header/Header";
 import Container from "./Components/Base/Container/Container";
 import Footer from "./Components/Sections/Footer/Footer";
 import "./styles/index.scss";
-import "./styles/global.scss";
+/* 
+import "./styles/global.scss"; */
 
 export const metadata: Metadata = {
 	title: "Finance",
