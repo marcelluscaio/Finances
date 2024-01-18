@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Biryani } from "next/font/google";
 import Header from "./Components/Sections/Header/Header";
+import Container from "./Components/Base/Container/Container";
+import Footer from "./Components/Sections/Footer/Footer";
 import "./styles/index.scss";
 import "./styles/global.scss";
 
@@ -24,7 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		>
 			<body>
 				<Header />
-				{children}
+				<Container>{children}</Container>
+				<Footer />
 			</body>
 		</html>
 	);

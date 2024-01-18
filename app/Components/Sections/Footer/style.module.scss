@@ -1,0 +1,15 @@
+@use "../../../styles/colors" as color;
+
+.footer {
+	padding-block: var(--spacing-4);
+	background-color: color.$green-300;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& > span {
+			color: color.$white;
+		}
+	}
+}
