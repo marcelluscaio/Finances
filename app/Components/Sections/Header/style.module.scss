@@ -1,6 +1,8 @@
-@use "../../styles/colors" as color;
+@use "../../../styles/colors" as color;
 
 .header {
+	margin-bottom: var(--marginBottom1);
+
 	background-color: color.$green-300;
 
 	div {

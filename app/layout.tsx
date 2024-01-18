@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Biryani } from "next/font/google";
-import Header from "./Components/Header/Header";
+import Header from "./Components/Sections/Header/Header";
 import "./styles/index.scss";
 import "./styles/global.scss";
 

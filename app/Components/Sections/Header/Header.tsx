@@ -1,4 +1,4 @@
-import Container from "../Container/Container";
+import Container from "../../Base/Container/Container";
 import style from "./style.module.scss";
 
 export default function Header() {
