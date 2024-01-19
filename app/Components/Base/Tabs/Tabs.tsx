@@ -2,13 +2,14 @@
 
 import * as Tabs from "@radix-ui/react-tabs";
 import TextInput from "../TextInput/TextInput";
+import TextSelectInput from "../TextSelectInput/TextSelectInput";
 import Button from "../Button/Buttons";
 import Title from "../Title/Title";
 import style from "./style.module.scss";
 
 export default function TabsComponent() {
 	const triggers = ["Entries", "Accounts", "Labels", "Budget"];
-
+	console.log("Loguei! E eu sou cliente");
 	return (
 		<Tabs.Root
 			className={style.tab}
@@ -39,6 +40,11 @@ export default function TabsComponent() {
 					</Title>
 					<TextInput id="entry-description">Description</TextInput>
 					<TextInput id="entry-amount">Amount</TextInput>
+					<TextSelectInput
+						id="entry-label"
+						label="Label"
+						listItems={triggers}
+					/>
 					<TextInput id="entry-label">Label</TextInput>
 					<TextInput id="entry-account">Account</TextInput>
 					<TextInput id="entry-date">Date</TextInput>

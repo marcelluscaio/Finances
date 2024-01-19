@@ -1,0 +1,70 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "Caio",
+			"email": "email@email.com",
+			"password": "123456",
+			"accounts": [
+				{
+					"id": 1,
+					"description": "Conta corrente",
+					"total": 3000.33
+				}
+			],
+			"budgets": [
+				{
+					"id": 1,
+					"labels": {
+						"Aluguel": 800,
+						"Luz": 700,
+						"Mercado": 1320.8
+					},
+					"active": true
+				},
+				{
+					"id": 2,
+					"labels": {
+						"Aluguel": 650,
+						"Luz": 100,
+						"Lazer": 33.27,
+						"Mercado": 1320.8
+					},
+					"active": false
+				}
+			],
+			"entries": [
+				{
+					"id": 1,
+					"description": "Pagamento aluguel",
+					"type": "expense",
+					"label": "Aluguel",
+					"amount": 350,
+					"account_id": 1,
+					"budget_id": 1,
+					"date": "10/02/2024"
+				},
+				{
+					"id": 2,
+					"description": "Pagamento aluguel",
+					"type": "expense",
+					"label": "Aluguel",
+					"amount": 400,
+					"account_id": 1,
+					"budget_id": 1,
+					"date": "10/01/2024"
+				},
+				{
+					"id": 2,
+					"description": "Salario",
+					"type": "income",
+					"label": "Salario",
+					"amount": 2000,
+					"account_id": 1,
+					"budget_id": 1,
+					"date": "05/02/2024"
+				}
+			]
+		}
+	]
+}

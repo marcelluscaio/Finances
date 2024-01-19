@@ -1,5 +1,7 @@
 import { PropsWithChildren, ComponentProps } from "react";
 
+import InputContainer from "../InputContainer/InputContainer";
+
 import style from "./style.module.scss";
 
 type Props = {
@@ -8,7 +10,7 @@ type Props = {
 
 export default function TextInput({ id, children }: PropsWithChildren<Props>) {
 	return (
-		<div className={style.container}>
+		<InputContainer>
 			<label
 				className="text--small"
 				htmlFor={id}
@@ -20,6 +22,6 @@ export default function TextInput({ id, children }: PropsWithChildren<Props>) {
 				type="text"
 				id={id}
 			/>
-		</div>
+		</InputContainer>
 	);
 }

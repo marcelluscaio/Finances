@@ -1,3 +1,12 @@
+Check and use these primitives
+https://www.radix-ui.com/primitives/docs/components/tabs
+https://www.radix-ui.com/primitives/docs/components/select
+https://www.radix-ui.com/primitives/docs/components/tooltip
+
+Transformar cada grupo dentro do Tabs.content em um componente separado?
+
+Quando cria o orcamento, as entradas do orcamento viram as labels
+
 # Finance control
 
 > Readme written in English and in Portuguese
